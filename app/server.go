@@ -10,11 +10,11 @@ type Server struct {
 	done chan bool
 }
 
-func (s Server) Start() {
+func (s Server) Start(port string) {
 	s.setUpHandlers()
 
 	go func() {
-		if err := http.ListenAndServe(":8888", nil); err != nil {
+		if err := http.ListenAndServe(":"+port, nil); err != nil {
 			log.Println("Failed to start server: ", err)
 		}
 	}()

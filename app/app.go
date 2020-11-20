@@ -12,9 +12,9 @@ func NewApp() *App {
 	}
 }
 
-func (a *App) Start() <-chan bool {
-	a.server.Start()
-	a.client.RunQuery()
+func (a *App) Start(port, query string) <-chan bool {
+	a.server.Start(port)
+	a.client.RunQuery(query)
 
 	return a.done
 }

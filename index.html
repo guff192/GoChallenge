@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Github repositories list</title>
+</head>
+<body>
+<ul>
+    {{range .Items}}
+    <li><b>{{.Name}}</b> <a href="{{.URL}}">{{.FullName}}</a><br>{{.Description}}</li>
+    {{end}}
+</ul>
+</body>
+</html>

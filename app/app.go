@@ -1,9 +1,13 @@
 package app
 
+import (
+	"GoChallenge/app/web"
+)
+
 type App struct {
 	done   <-chan bool
-	server Server
-	client Client
+	server web.Server
+	client web.Client
 }
 
 func NewApp() *App {

@@ -10,5 +10,4 @@ var (
 	githubResp            util.GithubResponse
 	timeElapsed           bool
 	delayer               *time.Ticker
-	wait                  bool
 )

@@ -11,7 +11,7 @@ type Client struct {
 }
 
 func (c Client) RunQuery(query string) {
-	queryUrl := "https://api.github.com/search/repositories?q=" + query + "+language:go"
+	queryUrl := "https://api.github.com/search/repositories?q=" + query + "+language:go&per_page=100"
 	resp, err := http.Get(queryUrl)
 	if err != nil {
 		log.Println("Request error: ", err.Error())

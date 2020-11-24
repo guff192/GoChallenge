@@ -7,8 +7,8 @@ import (
 
 var (
 	GithubResponseChannel = make(chan util.GithubResponse, 1)
-	Next                  <-chan time.Time
-	GithubResp            util.GithubResponse
-	TimeElapsed           = false
-	ParseFinished         = false
+	githubResp            util.GithubResponse
+	timeElapsed           bool
+	delayer               *time.Ticker
+	wait                  bool
 )

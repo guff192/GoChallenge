@@ -7,7 +7,11 @@
 <body>
 <ul>
     {{range .Items}}
-    <li><b>{{.Name}}</b> <a href="{{.URL}}">{{.FullName}}</a><br>{{.Description}}</li>
+    <li>
+        <b>{{.Name}}</b> (<a href="{{.URL}}">{{.FullName}}</a>)
+        <br>
+        {{.Description}}
+    </li>
     {{end}}
 </ul>
 </body>
